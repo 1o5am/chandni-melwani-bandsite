@@ -10,27 +10,29 @@
 
 body {
     font-family: $font-primary;
-    color: $color-primary;
+    color: $color-primary-black;
 }
 
 .nav {
-    background-color: $color-primary;
-    padding: $padding-mobile;
+    background-color: $color-primary-black;
+    // padding-left: $padding-side-mobile;
+    // padding-right: $padding-side-mobile;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @include tablet-and-up {
-        padding: $padding-tablet;
-        display: flex;
+        padding: $padding-side-tablet;
+        flex-direction: row;
         align-items: center;
     }
 
     &__logo {
-        color: $color-background;
+        height: 20px;
+        width: 120px;
         text-decoration: none;
-        display: block;
-        font-size: 24px;
-        line-height: 32px;
-        font-weight: 700;
         margin-bottom: 8px;
+        margin-top: 15px;
 
         @include tablet-and-up {
             margin-bottom: 0;
@@ -41,8 +43,10 @@ body {
     &__list {
         list-style: none;
         display: flex;
+        width: 100%;
 
         @include tablet-and-up {
+            width: auto;
             gap: 24px;
         }
     }
@@ -50,8 +54,8 @@ body {
     &__item {
         flex: 1;
         text-align: center;
-        padding: 8px 0;
-        border-bottom: 4px solid transparent;
+        padding: 0.75rem;;
+        // border-bottom: 4px solid transparent;
 
         @include tablet-and-up {
             flex: 0 1 auto;
@@ -59,28 +63,29 @@ body {
         }
 
         &--active {
-            border-bottom-color: $color-background;
+            border-bottom: 4px solid $color-primary-white;
         }
     }
 
     &__link {
-        color: $color-secondary;
+        color: $color-primary-silver;
         text-decoration: none;
-        font-size: 14px;
-        line-height: 22px;
-        font-weight: 600;
-        padding: 0 24px;
+        font: $font-subheader-mobile;
 
         .nav__item--active & {
-            color: $color-background;
+            color: $color-primary-white;
             font-weight: 700;
+        }
+
+        @include tablet-and-up {
+            font: $font-subheader-desktop;
         }
     }
 }
 
 .hero {
     position: relative;
-    height: 50vh;
+    height: 30vh;
     background: url('../assets/images/hero-bio.jpg') center/cover no-repeat;
 
     @include tablet-and-up {
@@ -93,93 +98,111 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba($color-primary, 0.5);
+        background-color: rgba($color-primary-black, 0.5);
     }
 
     &__title {
         position: relative;
-        color: $color-background;
-        @include text-style-header;
-        padding: $padding-mobile;
-        padding-top: 80px;
+        color: $color-primary-white;
+        font: $font-page-header-mobile;
+        padding: $padding-side-mobile;
+        padding-top: $padding-before-headlines-mobile;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        min-height: 30vh;
 
         @include tablet-and-up {
-            padding: $padding-tablet;
-            padding-top: 120px;
+            font: $font-page-header-desktop;
+            padding: $padding-side-tablet;
+            padding-top: $padding-before-headlines-tablet;
         }
     }
 }
 
 .about {
-    @include section-padding;
+    padding: $padding-side-mobile;
 
     @include tablet-and-up {
+        padding: $padding-side-tablet;
         max-width: 1020px;
         margin: 0 auto;
     }
 
     &__title {
-        @include text-style-header;
-        margin-bottom: 24px;
+        font: $font-section-header-mobile;
+        margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
-            margin-bottom: 36px;
+            font: $font-section-header-desktop;
+            margin-bottom: $padding-after-headlines-tablet;
         }
     }
 
     &__quote {
-        margin-bottom: 24px;
+        margin-bottom: $padding-between-componenets-mobile;
 
         @include tablet-and-up {
-            margin-bottom: 36px;
+            margin-bottom: $padding-between-componenets-tablet;
             max-width: 80%;
         }
 
         &-text {
-            font-size: 14px;
-            line-height: 22px;
-            font-weight: 600;
-            margin-bottom: 16px;
+            font: $font-subheader-mobile;
+            margin-bottom: $padding-after-headlines-mobile;
 
             @include tablet-and-up {
-                font-size: 24px;
-                line-height: 32px;
-                margin-bottom: 24px;
+                font: $font-subheader-desktop;
+                margin-bottom: $padding-after-headlines-tablet;
             }
         }
 
         &-author {
-            @include text-style-body;
+            font: $font-subheader-mobile;
+
+            @include tablet-and-up {
+                font: $font-subheader-desktop;
+            }
         }
     }
 }
 
 .band {
-    margin-bottom: 36px;
+    margin-bottom: $padding-between-componenets-mobile;
+
+    @include tablet-and-up {
+        margin-bottom: $padding-between-componenets-tablet;
+    }
 
     &__title {
-        @include text-style-header;
-        margin-bottom: 24px;
+        font: $font-section-header-mobile;
+        margin-bottom: $padding-after-headlines-mobile;
+
+        @include tablet-and-up {
+            font: $font-section-header-desktop;
+            margin-bottom: $padding-after-headlines-tablet;
+        }
     }
 
     &__image {
         width: 100%;
-        margin-bottom: 24px;
+        margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
-            margin-bottom: 36px;
+            margin-bottom: $padding-after-headlines-tablet;
         }
     }
 
     &__text {
-        @include text-style-body;
-        margin-bottom: 24px;
+        font: $font-body-copy-mobile;
+        margin-bottom: $padding-between-componenets-mobile;
 
         @include tablet-and-up {
-            margin-bottom: 36px;
-            padding-right: 48px;
+            font: $font-body-copy-desktop;
+            margin-bottom: $padding-between-componenets-tablet;
+            padding-right: $padding-side-tablet;
             columns: 2;
-            column-gap: 36px;
+            column-gap: $padding-between-componenets-tablet;
         }
 
         &:last-child {
@@ -189,34 +212,40 @@ body {
 }
 
 .gallery {
+    padding: $padding-side-mobile;
+
+    @include tablet-and-up {
+        padding: $padding-side-tablet;
+    }
+
     &__title {
-        @include text-style-header;
-        margin-bottom: 24px;
+        font: $font-section-header-mobile;
+        margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
-            margin-bottom: 36px;
+            font: $font-section-header-desktop;
+            margin-bottom: $padding-after-headlines-tablet;
         }
     }
 
     &__container {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: $padding-between-componenets-mobile;
 
         @include tablet-and-up {
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 24px;
+            gap: $padding-between-componenets-tablet;
         }
     }
 
     &__image {
         width: 100%;
-        filter: grayscale(100%);
         transition: filter 0.3s ease;
 
         @include tablet-and-up {
-            width: calc((100% - 24px) / 2);
+            width: calc((100% - #{$padding-between-componenets-tablet}) / 2);
         }
 
         &:hover {
@@ -226,12 +255,12 @@ body {
 }
 
 .footer {
-    background-color: $color-primary;
-    color: $color-background;
-    padding: $padding-mobile;
+    background-color: $color-primary-black;
+    color: $color-primary-white;
+    padding: $padding-side-mobile;
 
     @include tablet-and-up {
-        padding: $padding-tablet;
+        padding: $padding-side-tablet;
     }
 
     &__contact {
@@ -239,25 +268,27 @@ body {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 36px;
+            margin-bottom: $padding-between-componenets-tablet;
         }
     }
 
     &__title {
-        @include text-style-header;
-        margin-bottom: 24px;
+        font: $font-section-header-mobile;
+        margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
+            font: $font-section-header-desktop;
             margin-bottom: 0;
         }
     }
 
     &__social {
         display: flex;
-        gap: 24px;
-        margin-bottom: 24px;
+        gap: 2rem;
+        margin-bottom: $padding-between-componenets-mobile;
 
         @include tablet-and-up {
+            gap: $padding-between-componenets-tablet;
             margin-bottom: 0;
         }
     }
@@ -268,15 +299,16 @@ body {
     }
 
     &__info {
+        font: $font-body-copy-mobile;
         @include tablet-and-up {
             display: flex;
             flex-wrap: wrap;
-            gap: 36px;
+            gap: $padding-between-componenets-tablet;
         }
     }
 
     &__company {
-        margin-bottom: 24px;
+        margin-bottom: $padding-between-componenets-mobile;
 
         @include tablet-and-up {
             margin-bottom: 0;
@@ -285,30 +317,38 @@ body {
     }
 
     &__company-name {
-        @include text-style-subheader;
-        margin-bottom: 16px;
+        margin-bottom: $padding-after-headlines-mobile;
+
+        @include tablet-and-up {
+            font: $font-subheader-desktop;
+            margin-bottom: $padding-after-headlines-tablet;
+        }
     }
 
     &__address {
-        @include text-style-body;
         font-style: normal;
-        margin-bottom: 24px;
+        margin-bottom: $padding-between-componenets-mobile;
 
         @include tablet-and-up {
+            font: $font-body-copy-desktop;
             margin-bottom: 0;
         }
+    }
+
+    &__address-divider {
+        margin-bottom: $padding-between-componenets-mobile;
     }
 
     &__booking {
         @include tablet-and-up {
             flex: 2;
             display: flex;
-            gap: 36px;
+            gap: $padding-between-componenets-tablet;
         }
     }
 
     &__agent {
-        margin-bottom: 24px;
+        margin-bottom: $padding-between-componenets-mobile;
 
         @include tablet-and-up {
             flex: 1;
@@ -317,27 +357,50 @@ body {
     }
 
     &__agent-name {
-        @include text-style-subheader;
-        margin-bottom: 16px;
+        font: $font-subheader-mobile;
+        margin-bottom: $padding-after-headlines-mobile;
+
+        @include tablet-and-up {
+            font: $font-subheader-desktop;
+            margin-bottom: $padding-after-headlines-tablet;
+        }
     }
 
     &__agent-region {
-        @include text-style-body;
-        margin-bottom: 16px;
+        font: $font-body-copy-mobile;
+        margin-bottom: $padding-after-headlines-mobile;
+
+        @include tablet-and-up {
+            font: $font-body-copy-desktop;
+            margin-bottom: $padding-after-headlines-tablet;
+        }
     }
 
     &__email {
-        color: $color-background;
+        color: $color-primary-white;
         text-decoration: none;
-        @include text-style-body;
+        font: $font-body-copy-mobile;
+
+        @include tablet-and-up {
+            font: $font-body-copy-desktop;
+        }
+    }
+
+    &__divider-one {
+        margin: 4rem 0;
+    }
+
+    &__divider-two {
+        margin-bottom: 1rem;
     }
 
     &__copyright {
-        @include text-style-body;
+        font: $font-body-copy-mobile;
 
         @include tablet-and-up {
+            font: $font-body-copy-desktop;
             width: 100%;
-            margin-top: 36px;
+            margin-top: $padding-between-componenets-tablet;
         }
     }
 }

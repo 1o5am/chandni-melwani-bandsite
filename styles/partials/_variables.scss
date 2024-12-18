@@ -8,12 +8,12 @@ $font-primary: 'Nunito Sans', sans-serif;
 
 // Mobile text styles
 
-$font-page-header-mobile: 700 1.5rem/2rem; 
-$font-section-header-mobile: 700 1.5rem/2rem;
-$font-subheader-mobile: 600 .875rem/1.375rem;
-$font-body-copy-mobile: 400 0.8125rem/1.125rem;  
-$font-footer-copy-mobile: 400 0.8125rem/1.125rem; 
-$font-labels-buttons-mobile: 700 0.625rem/1.25rem; 
+$font-page-header-mobile: 700 1.5rem/2rem 'Nunito Sans', sans-serif; 
+$font-section-header-mobile: 700 1.5rem/2rem 'Nunito Sans', sans-serif;
+$font-subheader-mobile: 550 1rem/1.375rem 'Nunito Sans', sans-serif;
+$font-body-copy-mobile: 200 0.8125rem/1.125rem 'Nunito Sans', sans-serif;  
+$font-footer-copy-mobile: 400 0.8125rem/1.125rem 'Nunito Sans', sans-serif; 
+$font-labels-buttons-mobile: 700 0.625rem/1.25rem 'Nunito Sans', sans-serif;
 
 // Desktop and Tablet text styles
 
@@ -64,10 +64,10 @@ $padding-between-componenets-tablet: 2.25rem;
 $cta-button-height: 40px;
 $cta-button-radius: 4px;
 
-$primary-cta-buttom-colour: $color-primary-black;
+// $primary-cta-buttom-colour: $color-primary-black;
 $primary-cta-buttom-text-color: $color-primary-white;
 
-$primary-cta-button-hover-colour: $color-secondary-black;
+$primary-cta-button-hover-colour: $color-secondary-dark-black;
 $primary-cta-button-hover-text-color: $color-primary-white;
 
 // Desktop & Tablet
