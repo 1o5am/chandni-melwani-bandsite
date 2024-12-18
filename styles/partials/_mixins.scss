@@ -117,7 +117,7 @@
 // Section Padding Mixin
 
 @mixin section-padding {
-    padding-top: $padding-before-heqadlines-mobile;
+    padding-top: $padding-before-headlines-mobile;
     padding-bottom: $padding-between-componenets-mobile;
 
     @include tablet-and-up {

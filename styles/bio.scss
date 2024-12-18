@@ -20,10 +20,8 @@ body {
     align-items: center;
 
     @include tablet-and-up {
-        padding: $padding-side-tablet;
-        // display: flex;
         flex-direction: row;
-        // align-items: center;
+        padding: 0;
     }
 
     &__logo {
@@ -74,9 +72,8 @@ body {
             font-weight: 700;
         }
 
-        @include tablet-and-up {
-            @include text-subheader-desktop;
-        }
+        // @include tablet-and-up {
+        //     @include text-subheader-desktop;
     }
 }
 
@@ -359,7 +356,7 @@ body {
         margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
-            font: $font-body-copy-desktop;
+            // font: $font-body-copy-desktop;
             margin-bottom: $padding-after-headlines-tablet;
         }
     }
