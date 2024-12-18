@@ -15,28 +15,26 @@ body {
 
 .nav {
     background-color: $color-primary-black;
-    // padding-left: $padding-side-mobile;
-    // padding-right: $padding-side-mobile;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     @include tablet-and-up {
         padding: $padding-side-tablet;
+        // display: flex;
         flex-direction: row;
-        align-items: center;
+        // align-items: center;
     }
 
     &__logo {
-        height: 20px;
-        width: 120px;
+        height: $logo-height;
+        width: $logo-width;
         text-decoration: none;
-        margin-bottom: 8px;
-        margin-top: 15px;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
 
         @include tablet-and-up {
-            margin-bottom: 0;
-            margin-right: 48px;
+            margin: 0 3rem 0 0;
         }
     }
 
@@ -47,19 +45,18 @@ body {
 
         @include tablet-and-up {
             width: auto;
-            gap: 24px;
+            gap: 1.5rem;
         }
     }
 
     &__item {
         flex: 1;
         text-align: center;
-        padding: 0.75rem;;
-        // border-bottom: 4px solid transparent;
+        padding: 0.75rem;
 
         @include tablet-and-up {
             flex: 0 1 auto;
-            padding: 24px 0;
+            padding: 1.5rem 0;
         }
 
         &--active {
@@ -70,7 +67,7 @@ body {
     &__link {
         color: $color-primary-silver;
         text-decoration: none;
-        font: $font-subheader-mobile;
+        @include text-subheader;
 
         .nav__item--active & {
             color: $color-primary-white;
@@ -78,7 +75,7 @@ body {
         }
 
         @include tablet-and-up {
-            font: $font-subheader-desktop;
+            @include text-subheader-desktop;
         }
     }
 }
@@ -102,9 +99,9 @@ body {
     }
 
     &__title {
+        @include text-page-header;
         position: relative;
         color: $color-primary-white;
-        font: $font-page-header-mobile;
         padding: $padding-side-mobile;
         padding-top: $padding-before-headlines-mobile;
         z-index: 1;
@@ -113,7 +110,6 @@ body {
         min-height: 30vh;
 
         @include tablet-and-up {
-            font: $font-page-header-desktop;
             padding: $padding-side-tablet;
             padding-top: $padding-before-headlines-tablet;
         }
@@ -121,6 +117,7 @@ body {
 }
 
 .about {
+    @include section-padding;
     padding: $padding-side-mobile;
 
     @include tablet-and-up {
@@ -130,11 +127,10 @@ body {
     }
 
     &__title {
-        font: $font-section-header-mobile;
+        @include text-section-header;
         margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
-            font: $font-section-header-desktop;
             margin-bottom: $padding-after-headlines-tablet;
         }
     }
@@ -148,21 +144,16 @@ body {
         }
 
         &-text {
-            font: $font-subheader-mobile;
+            @include text-subheader;
             margin-bottom: $padding-after-headlines-mobile;
 
             @include tablet-and-up {
-                font: $font-subheader-desktop;
                 margin-bottom: $padding-after-headlines-tablet;
             }
         }
 
         &-author {
-            font: $font-subheader-mobile;
-
-            @include tablet-and-up {
-                font: $font-subheader-desktop;
-            }
+            @include text-subheader;
         }
     }
 }
@@ -175,11 +166,10 @@ body {
     }
 
     &__title {
-        font: $font-section-header-mobile;
+        @include text-section-header;
         margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
-            font: $font-section-header-desktop;
             margin-bottom: $padding-after-headlines-tablet;
         }
     }
@@ -194,11 +184,10 @@ body {
     }
 
     &__text {
-        font: $font-body-copy-mobile;
+        @include text-body;
         margin-bottom: $padding-between-componenets-mobile;
 
         @include tablet-and-up {
-            font: $font-body-copy-desktop;
             margin-bottom: $padding-between-componenets-tablet;
             padding-right: $padding-side-tablet;
             columns: 2;
@@ -212,6 +201,7 @@ body {
 }
 
 .gallery {
+    @include section-padding;
     padding: $padding-side-mobile;
 
     @include tablet-and-up {
@@ -219,11 +209,10 @@ body {
     }
 
     &__title {
-        font: $font-section-header-mobile;
+        @include text-section-header;
         margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
-            font: $font-section-header-desktop;
             margin-bottom: $padding-after-headlines-tablet;
         }
     }
@@ -273,12 +262,11 @@ body {
     }
 
     &__title {
-        font: $font-section-header-mobile;
+        @include text-section-header;
         margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
-            font: $font-section-header-desktop;
-            margin-bottom: 0;
+            margin-bottom: $padding-after-headlines-tablet;
         }
     }
 
@@ -299,7 +287,8 @@ body {
     }
 
     &__info {
-        font: $font-body-copy-mobile;
+        @include text-body;
+
         @include tablet-and-up {
             display: flex;
             flex-wrap: wrap;
@@ -317,21 +306,21 @@ body {
     }
 
     &__company-name {
+        @include text-subheader;
         margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
-            font: $font-subheader-desktop;
             margin-bottom: $padding-after-headlines-tablet;
         }
     }
 
     &__address {
+        @include text-body;
         font-style: normal;
         margin-bottom: $padding-between-componenets-mobile;
 
         @include tablet-and-up {
-            font: $font-body-copy-desktop;
-            margin-bottom: 0;
+            margin-bottom: $padding-between-componenets-tablet;
         }
     }
 
@@ -357,17 +346,16 @@ body {
     }
 
     &__agent-name {
-        font: $font-subheader-mobile;
+        @include text-subheader;
         margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
-            font: $font-subheader-desktop;
             margin-bottom: $padding-after-headlines-tablet;
         }
     }
 
     &__agent-region {
-        font: $font-body-copy-mobile;
+        @include text-body;
         margin-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
@@ -379,10 +367,11 @@ body {
     &__email {
         color: $color-primary-white;
         text-decoration: none;
-        font: $font-body-copy-mobile;
+        @include text-body;
+        font-style: normal;
 
         @include tablet-and-up {
-            font: $font-body-copy-desktop;
+            @include text-body;
         }
     }
 
@@ -395,10 +384,9 @@ body {
     }
 
     &__copyright {
-        font: $font-body-copy-mobile;
+        @include text-footer;
 
         @include tablet-and-up {
-            font: $font-body-copy-desktop;
             width: 100%;
             margin-top: $padding-between-componenets-tablet;
         }
