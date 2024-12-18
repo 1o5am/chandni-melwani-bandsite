@@ -1,0 +1,84 @@
+// variables.scss
+
+// 1. Text styles 
+
+$font-primary: 'Nunito Sans', sans-serif;
+
+// font weight font size / line height
+
+// Mobile text styles
+
+$font-page-header-mobile: 700 1.5rem/2rem; 
+$font-section-header-mobile: 700 1.5rem/2rem;
+$font-subheader-mobile: 600 .875rem/1.375rem;
+$font-body-copy-mobile: 400 0.8125rem/1.125rem;  
+$font-footer-copy-mobile: 400 0.8125rem/1.125rem; 
+$font-labels-buttons-mobile: 700 0.625rem/1.25rem; 
+
+// Desktop and Tablet text styles
+
+// Desktop & Tablet text styles
+// font-weight font-size / line height
+
+$font-page-header-desktop: 700 3.75rem/4.25rem;          
+$font-section-header-desktop: 700 2.25rem/2.75rem;       
+$font-subheader-desktop: 500 1.5rem/2rem;                
+$font-body-copy-desktop: 400 0.875rem/1.375rem;          
+$font-body-copy-bold-desktop: 700 0.875rem/1.375rem;     
+$font-footer-copy-desktop: 400 0.875rem/1.25rem;         
+$font-footer-copy-bold-desktop: 700 0.875rem/1.25rem;    
+$font-labels-buttons-desktop: 700 0.75rem/1.25rem;  
+
+// 2. Colors
+
+$color-primary-black: #323232;
+$color-primary-silver: #AFAFAF;
+$color-primary-white: #FFFFFF;
+$color-secondary-dark-black: #000000;
+$color-secondary-mercury: #E1E1E1;
+$color-secondary-alabaster: #FAFAFA;
+
+// 3. Breakpoints
+
+$breakpoint-tablet: 48rem;  
+$breakpoint-desktop: 80rem;  
+
+// 4. Spacing
+
+// Mobile
+
+$padding-side-mobile: 1rem;                     
+$padding-before-headlines-mobile: 1.5rem;           
+$padding-after-headlines-mobile: 1rem;          
+$padding-between-componenets-mobile: 1rem;      
+
+// Desktop & Tablet
+
+$padding-side-tablet: 2.25rem;                 
+$padding-before-headlines-tablet: 3rem;         
+$padding-after-headlines-tablet: 2.25rem;       
+$padding-between-componenets-tablet: 2.25rem;  
+
+// 5. CTA Button
+
+$cta-button-height: 40px;
+$cta-button-radius: 4px;
+
+$primary-cta-buttom-colour: $color-primary-black;
+$primary-cta-buttom-text-color: $color-primary-white;
+
+$primary-cta-button-hover-colour: $color-secondary-black;
+$primary-cta-button-hover-text-color: $color-primary-white;
+
+// Desktop & Tablet
+
+$cta-button-min-width-desktop-tablet: 150px;
+$cta-button-min-padding-desktop-tablet-left-right: 32px;
+
+
+
+
+    
+
+
+

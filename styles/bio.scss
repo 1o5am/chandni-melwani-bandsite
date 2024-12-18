@@ -1,0 +1,343 @@
+// bio.scss
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-primary;
+}
+
+.nav {
+    background-color: $color-primary;
+    padding: $padding-mobile;
+
+    @include tablet-and-up {
+        padding: $padding-tablet;
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        color: $color-background;
+        text-decoration: none;
+        display: block;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        margin-bottom: 8px;
+
+        @include tablet-and-up {
+            margin-bottom: 0;
+            margin-right: 48px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+
+        @include tablet-and-up {
+            gap: 24px;
+        }
+    }
+
+    &__item {
+        flex: 1;
+        text-align: center;
+        padding: 8px 0;
+        border-bottom: 4px solid transparent;
+
+        @include tablet-and-up {
+            flex: 0 1 auto;
+            padding: 24px 0;
+        }
+
+        &--active {
+            border-bottom-color: $color-background;
+        }
+    }
+
+    &__link {
+        color: $color-secondary;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 600;
+        padding: 0 24px;
+
+        .nav__item--active & {
+            color: $color-background;
+            font-weight: 700;
+        }
+    }
+}
+
+.hero {
+    position: relative;
+    height: 50vh;
+    background: url('../assets/images/hero-bio.jpg') center/cover no-repeat;
+
+    @include tablet-and-up {
+        height: 60vh;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color-primary, 0.5);
+    }
+
+    &__title {
+        position: relative;
+        color: $color-background;
+        @include text-style-header;
+        padding: $padding-mobile;
+        padding-top: 80px;
+
+        @include tablet-and-up {
+            padding: $padding-tablet;
+            padding-top: 120px;
+        }
+    }
+}
+
+.about {
+    @include section-padding;
+
+    @include tablet-and-up {
+        max-width: 1020px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        @include text-style-header;
+        margin-bottom: 24px;
+
+        @include tablet-and-up {
+            margin-bottom: 36px;
+        }
+    }
+
+    &__quote {
+        margin-bottom: 24px;
+
+        @include tablet-and-up {
+            margin-bottom: 36px;
+            max-width: 80%;
+        }
+
+        &-text {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+
+            @include tablet-and-up {
+                font-size: 24px;
+                line-height: 32px;
+                margin-bottom: 24px;
+            }
+        }
+
+        &-author {
+            @include text-style-body;
+        }
+    }
+}
+
+.band {
+    margin-bottom: 36px;
+
+    &__title {
+        @include text-style-header;
+        margin-bottom: 24px;
+    }
+
+    &__image {
+        width: 100%;
+        margin-bottom: 24px;
+
+        @include tablet-and-up {
+            margin-bottom: 36px;
+        }
+    }
+
+    &__text {
+        @include text-style-body;
+        margin-bottom: 24px;
+
+        @include tablet-and-up {
+            margin-bottom: 36px;
+            padding-right: 48px;
+            columns: 2;
+            column-gap: 36px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.gallery {
+    &__title {
+        @include text-style-header;
+        margin-bottom: 24px;
+
+        @include tablet-and-up {
+            margin-bottom: 36px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include tablet-and-up {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+
+        @include tablet-and-up {
+            width: calc((100% - 24px) / 2);
+        }
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+    }
+}
+
+.footer {
+    background-color: $color-primary;
+    color: $color-background;
+    padding: $padding-mobile;
+
+    @include tablet-and-up {
+        padding: $padding-tablet;
+    }
+
+    &__contact {
+        @include tablet-and-up {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 36px;
+        }
+    }
+
+    &__title {
+        @include text-style-header;
+        margin-bottom: 24px;
+
+        @include tablet-and-up {
+            margin-bottom: 0;
+        }
+    }
+
+    &__social {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 24px;
+
+        @include tablet-and-up {
+            margin-bottom: 0;
+        }
+    }
+
+    &__social-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__info {
+        @include tablet-and-up {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 36px;
+        }
+    }
+
+    &__company {
+        margin-bottom: 24px;
+
+        @include tablet-and-up {
+            margin-bottom: 0;
+            flex: 1;
+        }
+    }
+
+    &__company-name {
+        @include text-style-subheader;
+        margin-bottom: 16px;
+    }
+
+    &__address {
+        @include text-style-body;
+        font-style: normal;
+        margin-bottom: 24px;
+
+        @include tablet-and-up {
+            margin-bottom: 0;
+        }
+    }
+
+    &__booking {
+        @include tablet-and-up {
+            flex: 2;
+            display: flex;
+            gap: 36px;
+        }
+    }
+
+    &__agent {
+        margin-bottom: 24px;
+
+        @include tablet-and-up {
+            flex: 1;
+            margin-bottom: 0;
+        }
+    }
+
+    &__agent-name {
+        @include text-style-subheader;
+        margin-bottom: 16px;
+    }
+
+    &__agent-region {
+        @include text-style-body;
+        margin-bottom: 16px;
+    }
+
+    &__email {
+        color: $color-background;
+        text-decoration: none;
+        @include text-style-body;
+    }
+
+    &__copyright {
+        @include text-style-body;
+
+        @include tablet-and-up {
+            width: 100%;
+            margin-top: 36px;
+        }
+    }
+}
