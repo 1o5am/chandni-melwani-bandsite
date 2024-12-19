@@ -230,6 +230,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: $padding-between-componenets-mobile;
+        @include padding-between-componenets;
 
         @include tablet-and-up {
             flex-direction: row;
