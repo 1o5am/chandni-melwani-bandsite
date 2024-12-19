@@ -11,6 +11,7 @@
 body {
     font-family: $font-primary;
     color: $color-primary-black;
+    @include text-body;
 }
 
 .nav {
@@ -137,6 +138,14 @@ body {
         @include padding-after-headlines;
         @include padding-between-componenets;
     }
+
+    &__divider {
+        @include tablet-and-up {
+            padding: 0 3rem 0 3rem;
+        }
+
+    }
+
 
     &__quote {
         @include padding-between-componenets;
@@ -333,45 +342,60 @@ body {
 
         @include tablet-and-up {
             display: flex;
+            flex-direction: row;
             flex-wrap: wrap;
-            gap: $padding-between-componenets-tablet;
+            justify-content: space-between;
+            // gap: $padding-between-componenets-tablet;
+            width: 100%;
         }
     }
 
     &__company {
-        margin-bottom: $padding-between-componenets-mobile;
-
         @include tablet-and-up {
-            margin-bottom: 0;
-            flex: 1;
+            width: 33%;
+            // flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: $padding-between-componenets-tablet;
         }
     }
 
     &__company-name {
         @include text-subheader;
-        margin-bottom: $padding-after-headlines-mobile;
 
-        @include tablet-and-up {
-            margin-bottom: $padding-after-headlines-tablet;
-        }
+        // @include tablet-and-up {
+        //     gap: $padding-between-componenets-tablet;
+        // }
+    //     // margin-bottom: $padding-after-headlines-mobile;
+
+    //     @include tablet-and-up {
+    //         // margin-bottom: $padding-after-headlines-tablet;
+    //     }
+    // }
     }
 
     &__address {
         @include text-body;
         font-style: normal;
-        margin-bottom: $padding-between-componenets-mobile;
+        // @include padding-between-componenets;
+        // margin-bottom: $padding-between-componenets-mobile;
 
         @include tablet-and-up {
-            margin-bottom: $padding-between-componenets-tablet;
+            // margin-bottom: $padding-between-componenets-tablet;
         }
     }
 
     &__address-divider {
-        margin-bottom: $padding-between-componenets-mobile;
+        padding-bottom: $padding-between-componenets-mobile;
+
+        @include tablet-and-up {
+            padding-top: $padding-between-componenets-tablet;
+        }
     }
 
     &__booking {
         @include tablet-and-up {
+            width: 33%;
             flex: 2;
             display: flex;
             gap: $padding-between-componenets-tablet;

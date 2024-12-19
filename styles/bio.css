@@ -7,6 +7,16 @@
 body {
   font-family: "Nunito Sans", sans-serif;
   color: #323232;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 
 .nav {
@@ -174,6 +184,11 @@ body {
   .about__title {
     padding-top: 2.25rem;
     padding-bottom: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .about__divider {
+    padding: 0 3rem 0 3rem;
   }
 }
 .about__quote {
@@ -440,17 +455,18 @@ body {
 @media (min-width: 768px) {
   .footer__info {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 2.25rem;
+    justify-content: space-between;
+    width: 100%;
   }
-}
-.footer__company {
-  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .footer__company {
-    margin-bottom: 0;
-    flex: 1;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
   }
 }
 .footer__company-name {
@@ -458,7 +474,6 @@ body {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .footer__company-name {
@@ -467,18 +482,12 @@ body {
     font-weight: 500;
   }
 }
-@media (min-width: 768px) {
-  .footer__company-name {
-    margin-bottom: 2.25rem;
-  }
-}
 .footer__address {
   font-family: "Nunito Sans", sans-serif;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .footer__address {
@@ -486,16 +495,17 @@ body {
     line-height: 1.375rem;
   }
 }
-@media (min-width: 768px) {
-  .footer__address {
-    margin-bottom: 2.25rem;
-  }
-}
 .footer__address-divider {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .footer__address-divider {
+    padding-top: 2.25rem;
+  }
 }
 @media (min-width: 768px) {
   .footer__booking {
+    width: 33%;
     flex: 2;
     display: flex;
     gap: 2.25rem;
