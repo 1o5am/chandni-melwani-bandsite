@@ -15,12 +15,12 @@ $color-secondary-alabaster: #FAFAFA;
 
 // 3. Breakpoints
 
-$breakpoint-tablet: 768px;  
-$breakpoint-desktop: 1280px;  
+$breakpoint-tablet: 48rem;  
+$breakpoint-desktop: 80rem;  
 
 // Image Dimensions
-$logo-height: 20px;
-$logo-width: 120px;
+$logo-height: 1.25rem;
+$logo-width: 7.5rem;
 
 // 4. Spacing
 
@@ -43,8 +43,8 @@ $padding-side-desktop: 7rem;
 
 // 5. CTA Button
 
-$cta-button-height: 40px;
-$cta-button-radius: 4px;
+$cta-button-height: 2.5rem;
+$cta-button-radius: 0.25rem;
 
 // $primary-cta-buttom-colour: $color-primary-black;
 $primary-cta-buttom-text-color: $color-primary-white;
@@ -54,8 +54,8 @@ $primary-cta-button-hover-text-color: $color-primary-white;
 
 // Desktop & Tablet
 
-$cta-button-min-width-desktop-tablet: 150px;
-$cta-button-min-padding-desktop-tablet-left-right: 32px;
+$cta-button-min-width-desktop-tablet: 9.375rem;
+$cta-button-min-padding-desktop-tablet-left-right: 2rem;
 
 
 
