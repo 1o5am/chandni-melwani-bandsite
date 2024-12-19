@@ -77,9 +77,6 @@ body {
             color: $color-primary-white;
             font-weight: 700;
         }
-
-        // @include tablet-and-up {
-        //     @include text-subheader-desktop;
     }
 }
 
@@ -170,12 +167,6 @@ main {
 
         @include tablet-and-up {
             flex-direction: row;
-
-
-            // margin-bottom: $padding-between-componenets-tablet;
-            // padding-right: $padding-side-tablet;
-            // columns: 2;
-            // column-gap: $padding-between-componenets-tablet;
         }
 
         &:last-child {
@@ -270,7 +261,6 @@ main {
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
-            // gap: $padding-between-componenets-tablet;
             width: 100%;
         }
     }
