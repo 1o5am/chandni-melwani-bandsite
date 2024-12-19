@@ -35,8 +35,8 @@ body {
 }
 @media (min-width: 1280px) {
   .nav {
-    padding-right: 8rem;
-    padding-left: 8rem;
+    padding-right: 7rem;
+    padding-left: 7rem;
   }
 }
 @media (min-width: 768px) {
@@ -124,8 +124,8 @@ body {
 }
 @media (min-width: 1280px) {
   .hero {
-    padding-right: 8rem;
-    padding-left: 8rem;
+    padding-right: 7rem;
+    padding-left: 7rem;
   }
 }
 .hero__overlay {
@@ -165,8 +165,8 @@ main {
 }
 @media (min-width: 1280px) {
   main {
-    padding-right: 8rem;
-    padding-left: 8rem;
+    padding-right: 7rem;
+    padding-left: 7rem;
   }
 }
 
@@ -374,8 +374,8 @@ main {
 }
 @media (min-width: 1280px) {
   .footer {
-    padding-right: 8rem;
-    padding-left: 8rem;
+    padding-right: 7rem;
+    padding-left: 7rem;
   }
 }
 @media (min-width: 768px) {
