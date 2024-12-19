@@ -116,13 +116,6 @@ main {
 
 .about {
 
-    &__container {
-        @include tablet-and-up {
-            max-width: 1020px;
-            margin: 0 auto;
-        }
-    }
-
     &__title {
         @include text-section-header;
         @include padding-before-headlines;
@@ -137,61 +130,52 @@ main {
 
     }
 
+    &__band-image {
+        width: 100%;
+    }
 
     &__quote {
         @include padding-between-componenets;
-        // @include tablet-and-up {
-        //     margin-bottom: $padding-between-componenets-tablet;
-        //     max-width: 80%;
-        // }
-        
+
         &-text {
             @include text-subheader;
-            // margin-top: $padding-between-componenets-mobile;
-            // @include padding-between-componenets;
-            // margin-bottom: $padding-after-headlines-mobile;
-
-            // @include tablet-and-up {
-            //     margin-bottom: $padding-after-headlines-tablet;
-            // }
         }
 
         &-author {
-            @include text-subheader;
-            padding-top: 0.5rem;
-            
             @include tablet-and-up {
-                padding-top: 0.5rem;
+                padding-top: 1rem;
+                @include text-body-bold;
             }
         }
     }
 }
 
 .band {
-    @include padding-between-componenets;
+    @include text-body;
+    padding-bottom: $padding-between-componenets-mobile;
 
-    // @include tablet-and-up {
-    //     margin-bottom: $padding-between-componenets-tablet;
-    // }
+    @include tablet-and-up {
+        padding-bottom: $padding-between-componenets-tablet;
+    }
 
     &__title {
         @include text-subheader;
         @include padding-after-headlines;
     }
 
-    &__image {
-        width: 100%;
-    }
-
     &__text {
-        @include text-body;
-        margin-bottom: $padding-between-componenets-mobile;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
 
         @include tablet-and-up {
-            margin-bottom: $padding-between-componenets-tablet;
-            padding-right: $padding-side-tablet;
-            columns: 2;
-            column-gap: $padding-between-componenets-tablet;
+            flex-direction: row;
+
+
+            // margin-bottom: $padding-between-componenets-tablet;
+            // padding-right: $padding-side-tablet;
+            // columns: 2;
+            // column-gap: $padding-between-componenets-tablet;
         }
 
         &:last-child {
@@ -202,10 +186,6 @@ main {
 
 .gallery {
     background-color: $color-secondary-alabaster;
-
-    // @include tablet-and-up {
-    //     padding-top: $padding-before-headlines-tablet;
-    // }
 
     &__title {
         @include text-section-header;
@@ -298,36 +278,9 @@ main {
         gap: 1rem;
     }
 
-    // &__company {
-    //     @include tablet-and-up {
-    //         width: 33%;
-    //         // flex: 1;
-    //         display: flex;
-    //         flex-direction: column;
-    //         gap: $padding-between-componenets-tablet;
-    //     }
-    // }
-
     &__address {
         font-style: normal;
     }
-
-    // &__address-divider {
-
-    //     @include tablet-and-up {
-    //         padding-top: $padding-between-componenets-tablet;
-    //     }
-    // }
-
-    // &__booking {
-    //     @include tablet-and-up {
-    //         width: 33%;
-    //         flex: 2;
-    //         display: flex;
-    //         gap: $padding-between-componenets-tablet;
-    //     }
-    // }
-
 
     &__email {
         color: $color-primary-white;
@@ -352,7 +305,6 @@ main {
     }
 
     &__logo-image--mobile {
-        // padding-top: 1.5rem;
 
         @include tablet-and-up {
             display: none;
@@ -367,13 +319,4 @@ main {
             margin-left: 10rem;
         }
     }
-
- 
-//     &__copyright {
-//         @include tablet-and-up {
-//             width: 100%;
-//             margin-top: $padding-between-componenets-tablet;
-//         }
-//     }
-
 }
