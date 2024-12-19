@@ -265,28 +265,51 @@ body {
 .footer {
     background-color: $color-primary-black;
     color: $color-primary-white;
-    padding: $padding-side-mobile;
+    @include padding-side;
+    @include padding-before-headlines;
+    @include padding-after-headlines;
+    // @include tablet-and-up {
+    //     padding: $padding-side-tablet;
+    // }
 
-    @include tablet-and-up {
-        padding: $padding-side-tablet;
-    }
 
     &__contact {
+
         @include tablet-and-up {
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
+            gap: $padding-between-componenets-tablet;
             align-items: center;
             margin-bottom: $padding-between-componenets-tablet;
+            
+        }
+    }
+
+    &__logo-image {
+        height: $logo-height;
+        width: $logo-width;
+
+    }
+
+    &__logo-image--mobile {
+        display: flex;
+
+        @include tablet-and-up {
+            display: none;
+        }
+    }
+
+    &__logo-image--tablet {
+        display: none;
+
+        @include tablet-and-up {
+            display: flex;
+            margin-left: 10rem;
         }
     }
 
     &__title {
         @include text-section-header;
-        margin-bottom: $padding-after-headlines-mobile;
-
-        @include tablet-and-up {
-            margin-bottom: $padding-after-headlines-tablet;
-        }
     }
 
     &__social {
