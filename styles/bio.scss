@@ -19,10 +19,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include padding-side;
 
     @include tablet-and-up {
         flex-direction: row;
-        padding-left: 2.25rem;
     }
 
     &__logo {
@@ -84,15 +84,14 @@ body {
 }
 
 .hero {
+    @include padding-side;
     position: relative;
-    height: 30vh;
+    aspect-ratio: 16/9;
+    height: auto;
     background: url('../assets/images/hero-bio.jpg') center/cover no-repeat;
-
-
-    @include tablet-and-up {
-        height: 52.5vh;
-
-    }
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
     &__overlay {
         position: absolute;
@@ -107,23 +106,15 @@ body {
         @include text-page-header;
         position: relative;
         color: $color-primary-white;
-        padding: $padding-side-mobile;
-        padding-top: $padding-before-headlines-mobile;
         z-index: 1;
-        display: flex;
-        align-items: center;
-        min-height: 30vh;
-
-        @include tablet-and-up {
-            padding: $padding-side-tablet;
-            padding-top: $padding-before-headlines-tablet;
-            min-height: 52.5vh;
-        }
+        text-align: center;
     }
+}
+main {
+    @include padding-side;
 }
 
 .about {
-    @include padding-side;
 
     &__container {
         @include tablet-and-up {
@@ -217,7 +208,6 @@ body {
 }
 
 .gallery {
-    @include padding-side;
     background-color: $color-secondary-alabaster;
 
     // @include tablet-and-up {

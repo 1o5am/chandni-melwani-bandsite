@@ -140,6 +140,11 @@
         padding-right: $padding-side-tablet;
         padding-left: $padding-side-tablet;
     }
+
+    @include desktop-and-up {
+        padding-right: $padding-side-desktop;
+        padding-left: $padding-side-desktop;
+    }
 }
 
 @mixin padding-between-componenets {

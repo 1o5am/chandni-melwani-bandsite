@@ -24,11 +24,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media (min-width: 768px) {
+  .nav {
+    padding-right: 2.25rem;
+    padding-left: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .nav {
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
 }
 @media (min-width: 768px) {
   .nav {
     flex-direction: row;
-    padding-left: 2.25rem;
   }
 }
 .nav__logo {
@@ -93,13 +106,26 @@ body {
 }
 
 .hero {
+  padding-right: 1rem;
+  padding-left: 1rem;
   position: relative;
-  height: 30vh;
+  aspect-ratio: 16/9;
+  height: auto;
   background: url("../assets/images/hero-bio.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 @media (min-width: 768px) {
   .hero {
-    height: 52.5vh;
+    padding-right: 2.25rem;
+    padding-left: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    padding-right: 8rem;
+    padding-left: 8rem;
   }
 }
 .hero__overlay {
@@ -117,12 +143,8 @@ body {
   font-weight: 700;
   position: relative;
   color: #FFFFFF;
-  padding: 1rem;
-  padding-top: 1.5rem;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  min-height: 30vh;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .hero__title {
@@ -130,24 +152,24 @@ body {
     line-height: 4.25rem;
   }
 }
-@media (min-width: 768px) {
-  .hero__title {
-    padding: 2.25rem;
-    padding-top: 3rem;
-    min-height: 52.5vh;
-  }
-}
 
-.about {
+main {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 @media (min-width: 768px) {
-  .about {
+  main {
     padding-right: 2.25rem;
     padding-left: 2.25rem;
   }
 }
+@media (min-width: 1280px) {
+  main {
+    padding-right: 8rem;
+    padding-left: 8rem;
+  }
+}
+
 @media (min-width: 768px) {
   .about__container {
     max-width: 1020px;
@@ -292,15 +314,7 @@ body {
 }
 
 .gallery {
-  padding-right: 1rem;
-  padding-left: 1rem;
   background-color: #FAFAFA;
-}
-@media (min-width: 768px) {
-  .gallery {
-    padding-right: 2.25rem;
-    padding-left: 2.25rem;
-  }
 }
 .gallery__title {
   font-family: "Nunito Sans", sans-serif;
@@ -372,6 +386,12 @@ body {
   .footer {
     padding-right: 2.25rem;
     padding-left: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    padding-right: 8rem;
+    padding-left: 8rem;
   }
 }
 @media (min-width: 768px) {
