@@ -18,7 +18,7 @@ body {
 @media (min-width: 768px) {
   .nav {
     flex-direction: row;
-    padding: 0;
+    padding-left: 2.25rem;
   }
 }
 .nav__logo {
@@ -32,6 +32,10 @@ body {
   .nav__logo {
     margin: 0 3rem 0 0;
   }
+}
+.nav__logo-image {
+  height: 100%;
+  width: 100%;
 }
 .nav__list {
   list-style: none;
@@ -85,7 +89,7 @@ body {
 }
 @media (min-width: 768px) {
   .hero {
-    height: 60vh;
+    height: 52.5vh;
   }
 }
 .hero__overlay {
@@ -120,23 +124,22 @@ body {
   .hero__title {
     padding: 2.25rem;
     padding-top: 3rem;
+    min-height: 52.5vh;
   }
 }
 
 .about {
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  padding: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 @media (min-width: 768px) {
   .about {
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
+    padding-right: 2.25rem;
+    padding-left: 2.25rem;
   }
 }
 @media (min-width: 768px) {
-  .about {
-    padding: 2.25rem;
+  .about__container {
     max-width: 1020px;
     margin: 0 auto;
   }
@@ -146,7 +149,10 @@ body {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .about__title {
@@ -156,16 +162,28 @@ body {
 }
 @media (min-width: 768px) {
   .about__title {
-    margin-bottom: 2.25rem;
+    padding-top: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .about__title {
+    padding-bottom: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .about__title {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 .about__quote {
-  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .about__quote {
-    margin-bottom: 2.25rem;
-    max-width: 80%;
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 .about__quote-text {
@@ -173,18 +191,12 @@ body {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .about__quote-text {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 500;
-  }
-}
-@media (min-width: 768px) {
-  .about__quote-text {
-    margin-bottom: 2.25rem;
   }
 }
 .about__quote-author {
@@ -192,12 +204,18 @@ body {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
+  padding-top: 0.5rem;
 }
 @media (min-width: 768px) {
   .about__quote-author {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 500;
+  }
+}
+@media (min-width: 768px) {
+  .about__quote-author {
+    padding-top: 0.5rem;
   }
 }
 
@@ -211,30 +229,25 @@ body {
 }
 .band__title {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .band__title {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
   }
 }
 @media (min-width: 768px) {
   .band__title {
-    margin-bottom: 2.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 .band__image {
   width: 100%;
-  margin-bottom: 1rem;
-}
-@media (min-width: 768px) {
-  .band__image {
-    margin-bottom: 2.25rem;
-  }
 }
 .band__text {
   font-family: "Nunito Sans", sans-serif;
@@ -264,19 +277,14 @@ body {
 }
 
 .gallery {
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-  padding: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: #FAFAFA;
 }
 @media (min-width: 768px) {
   .gallery {
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-  }
-}
-@media (min-width: 768px) {
-  .gallery {
-    padding: 2.25rem;
+    padding-right: 2.25rem;
+    padding-left: 2.25rem;
   }
 }
 .gallery__title {
@@ -284,7 +292,8 @@ body {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .gallery__title {
@@ -294,7 +303,12 @@ body {
 }
 @media (min-width: 768px) {
   .gallery__title {
-    margin-bottom: 2.25rem;
+    padding-top: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .gallery__title {
+    padding-bottom: 2.25rem;
   }
 }
 .gallery__container {
@@ -311,15 +325,16 @@ body {
 }
 .gallery__image {
   width: 100%;
-  transition: filter 0.3s ease;
+  aspect-ratio: 16/9;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (min-width: 768px) {
   .gallery__image {
-    width: calc((100% - 2.25rem) / 2);
+    width: calc((100% - 2.25rem * 2) / 3);
   }
-}
-.gallery__image:hover {
-  filter: grayscale(0%);
 }
 
 .footer {

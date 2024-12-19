@@ -21,7 +21,7 @@ body {
 
     @include tablet-and-up {
         flex-direction: row;
-        padding: 0;
+        padding-left: 2.25rem;
     }
 
     &__logo {
@@ -34,6 +34,11 @@ body {
         @include tablet-and-up {
             margin: 0 3rem 0 0;
         }
+    }
+
+    &__logo-image {
+        height: 100%;
+        width: 100%;
     }
 
     &__list {
@@ -82,8 +87,10 @@ body {
     height: 30vh;
     background: url('../assets/images/hero-bio.jpg') center/cover no-repeat;
 
+
     @include tablet-and-up {
-        height: 60vh;
+        height: 52.5vh;
+
     }
 
     &__overlay {
@@ -109,48 +116,53 @@ body {
         @include tablet-and-up {
             padding: $padding-side-tablet;
             padding-top: $padding-before-headlines-tablet;
+            min-height: 52.5vh;
         }
     }
 }
 
 .about {
-    @include section-padding;
-    padding: $padding-side-mobile;
+    @include padding-side;
 
-    @include tablet-and-up {
-        padding: $padding-side-tablet;
-        max-width: 1020px;
-        margin: 0 auto;
+    &__container {
+        @include tablet-and-up {
+            max-width: 1020px;
+            margin: 0 auto;
+        }
     }
 
     &__title {
         @include text-section-header;
-        margin-bottom: $padding-after-headlines-mobile;
-
-        @include tablet-and-up {
-            margin-bottom: $padding-after-headlines-tablet;
-        }
+        @include padding-before-headlines;
+        @include padding-after-headlines;
+        @include padding-between-componenets;
     }
 
     &__quote {
-        margin-bottom: $padding-between-componenets-mobile;
-
-        @include tablet-and-up {
-            margin-bottom: $padding-between-componenets-tablet;
-            max-width: 80%;
-        }
-
+        @include padding-between-componenets;
+        // @include tablet-and-up {
+        //     margin-bottom: $padding-between-componenets-tablet;
+        //     max-width: 80%;
+        // }
+        
         &-text {
             @include text-subheader;
-            margin-bottom: $padding-after-headlines-mobile;
+            // margin-top: $padding-between-componenets-mobile;
+            // @include padding-between-componenets;
+            // margin-bottom: $padding-after-headlines-mobile;
 
-            @include tablet-and-up {
-                margin-bottom: $padding-after-headlines-tablet;
-            }
+            // @include tablet-and-up {
+            //     margin-bottom: $padding-after-headlines-tablet;
+            // }
         }
 
         &-author {
             @include text-subheader;
+            padding-top: 0.5rem;
+            
+            @include tablet-and-up {
+                padding-top: 0.5rem;
+            }
         }
     }
 }
@@ -163,21 +175,19 @@ body {
     }
 
     &__title {
-        @include text-section-header;
-        margin-bottom: $padding-after-headlines-mobile;
+        @include text-subheader;
+        padding-bottom: $padding-after-headlines-mobile;
 
         @include tablet-and-up {
-            margin-bottom: $padding-after-headlines-tablet;
+            padding-bottom: $padding-after-headlines-tablet;
         }
     }
 
     &__image {
         width: 100%;
-        margin-bottom: $padding-after-headlines-mobile;
 
-        @include tablet-and-up {
-            margin-bottom: $padding-after-headlines-tablet;
-        }
+        // @include tablet-and-up {
+        // }
     }
 
     &__text {
@@ -198,20 +208,22 @@ body {
 }
 
 .gallery {
-    @include section-padding;
-    padding: $padding-side-mobile;
+    @include padding-side;
+    background-color: $color-secondary-alabaster;
 
-    @include tablet-and-up {
-        padding: $padding-side-tablet;
-    }
+    // @include tablet-and-up {
+    //     padding-top: $padding-before-headlines-tablet;
+    // }
 
     &__title {
         @include text-section-header;
-        margin-bottom: $padding-after-headlines-mobile;
+        @include padding-before-headlines;
+        @include padding-after-headlines;
+        // padding-bottom: $padding-after-headlines-mobile;
 
-        @include tablet-and-up {
-            margin-bottom: $padding-after-headlines-tablet;
-        }
+        // @include tablet-and-up {
+        //     padding-bottom: $padding-after-headlines-tablet;
+        // }
     }
 
     &__container {
@@ -228,16 +240,25 @@ body {
 
     &__image {
         width: 100%;
-        transition: filter 0.3s ease;
+        aspect-ratio: 16/9;
+        height: auto;
+        display: block;
+        object-fit: cover;
 
         @include tablet-and-up {
-            width: calc((100% - #{$padding-between-componenets-tablet}) / 2);
-        }
-
-        &:hover {
-            filter: grayscale(0%);
+            width: calc((100% - #{$padding-between-componenets-tablet} * 2) / 3);
         }
     }
+
+
+    // //     // // @include tablet-and-up {
+    // //     // //     width: calc((100% - #{$padding-between-componenets-tablet}) / 3);
+    // //     // // }
+
+    // //     &:hover {
+    // //         filter: grayscale(0%);
+    //     }
+    // }
 }
 
 .footer {
