@@ -386,10 +386,17 @@ main {
 }
 @media (min-width: 768px) {
   .footer__contact {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     display: flex;
     gap: 2.25rem;
     align-items: center;
-    margin-bottom: 2.25rem;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .footer__contact {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 .footer__title {
@@ -414,6 +421,11 @@ main {
 @media (min-width: 768px) {
   .footer__title {
     padding-bottom: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer__title {
+    padding: 0;
   }
 }
 .footer__social {
@@ -490,6 +502,6 @@ main {
 @media (min-width: 768px) {
   .footer__logo-image--tablet {
     display: flex;
-    margin-left: 10rem;
+    margin-left: auto;
   }
 }/*# sourceMappingURL=bio.css.map */

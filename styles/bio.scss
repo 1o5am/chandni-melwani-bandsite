@@ -224,14 +224,13 @@ main {
     @include padding-side;
     @include text-footer;
 
+
     &__contact {
-        
         @include tablet-and-up {
+            @include padding-between-componenets;
             display: flex;
-            // justify-content: space-between;
             gap: $padding-between-componenets-tablet;
             align-items: center;
-            margin-bottom: $padding-between-componenets-tablet;
         }
     }
 
@@ -239,6 +238,10 @@ main {
         @include text-section-header;
         @include padding-before-headlines;
         @include padding-after-headlines;
+
+        @include tablet-and-up {
+            padding: 0;
+        }
     }
 
     &__social {
@@ -316,7 +319,7 @@ main {
 
         @include tablet-and-up {
             display: flex;
-            margin-left: 10rem;
+            margin-left: auto;
         }
     }
 }
