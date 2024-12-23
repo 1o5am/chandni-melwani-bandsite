@@ -515,8 +515,6 @@ main {
   .comments__button {
     min-width: 9.375rem;
     padding: 0 2rem;
-    max-width: 20%;
-    margin-left: auto;
   }
 }
 .comments__list {
@@ -560,7 +558,32 @@ main {
   }
 }
 .comments__item-date {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
   color: #AFAFAF;
+  margin: 0;
+}
+@media (min-width: 48rem) {
+  .comments__item-date {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+.comments__item-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.5;
+}
+@media (min-width: 48rem) {
+  .comments__item-text {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 
 .footer {
@@ -711,4 +734,282 @@ main {
     display: flex;
     margin-left: auto;
   }
-}/*# sourceMappingURL=bio.css.map */
+}
+
+.hero {
+  background: url("../assets/images/hero-shows.jpg") center/cover no-repeat;
+}
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 48rem) {
+  .hero__content {
+    padding: 3rem 0;
+    max-width: 80%;
+  }
+}
+@media (min-width: 80rem) {
+  .hero__content {
+    max-width: 60%;
+    padding-top: 4rem;
+  }
+}
+.hero__album {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+}
+@media (min-width: 48rem) {
+  .hero__album {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+}
+.hero__title {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: left;
+  width: 40%;
+  color: #FFFFFF;
+}
+@media (min-width: 48rem) {
+  .hero__title {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+  }
+}
+@media (min-width: 48rem) {
+  .hero__title {
+    width: 80%;
+  }
+}
+@media (min-width: 80rem) {
+  .hero__title {
+    width: 100%;
+  }
+}
+.hero__title-soundcloud-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media (min-width: 80rem) {
+  .hero__title-soundcloud-container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+.hero__soundcloud {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+@media (min-width: 48rem) {
+  .hero__soundcloud {
+    max-width: 80%;
+  }
+}
+@media (min-width: 80rem) {
+  .hero__soundcloud {
+    max-width: 60%;
+  }
+}
+
+.shows {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #FFFFFF;
+}
+@media (min-width: 48rem) {
+  .shows {
+    padding-right: 2.25rem;
+    padding-left: 2.25rem;
+  }
+}
+@media (min-width: 80rem) {
+  .shows {
+    padding-right: 7rem;
+    padding-left: 7rem;
+  }
+}
+@media (min-width: 48rem) {
+  .shows {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+}
+.shows__title {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+@media (min-width: 48rem) {
+  .shows__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+@media (min-width: 48rem) {
+  .shows__title {
+    padding-bottom: 2.25rem;
+  }
+}
+.shows__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 48rem) {
+  .shows__container {
+    gap: 0;
+  }
+}
+.shows__header {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .shows__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    padding: 0 1.5rem;
+    margin-bottom: 1rem;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+.shows__header-cell {
+  color: #AFAFAF;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (min-width: 48rem) {
+  .shows__header-cell {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+
+.show {
+  padding: 1rem;
+  border-bottom: 1px solid #E1E1E1;
+}
+@media (min-width: 48rem) {
+  .show {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    padding: 1.5rem;
+  }
+}
+.show__label {
+  color: #AFAFAF;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+@media (min-width: 48rem) {
+  .show__label {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+@media (min-width: 48rem) {
+  .show__label {
+    display: none;
+  }
+}
+.show__info {
+  margin-bottom: 1rem;
+}
+@media (min-width: 48rem) {
+  .show__info {
+    margin-bottom: 0;
+  }
+}
+.show__info--date {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-weight: 700;
+}
+@media (min-width: 48rem) {
+  .show__info--date {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+.show__info--venue, .show__info--location {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@media (min-width: 48rem) {
+  .show__info--venue, .show__info--location {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+.show__button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #323232;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0.25rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+@media (min-width: 48rem) {
+  .show__button {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+@media (min-width: 48rem) {
+  .show__button {
+    width: auto;
+    min-width: 9.375rem;
+    padding: 0.75rem 2rem;
+  }
+}
+.show__button:hover {
+  background-color: #000000;
+}
+.show:hover {
+  background-color: #FAFAFA;
+}
+.show--selected {
+  background-color: #E1E1E1;
+}/*# sourceMappingURL=shows.css.map */

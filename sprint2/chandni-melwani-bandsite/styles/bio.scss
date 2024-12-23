@@ -311,6 +311,8 @@ main {
         @include tablet-and-up {
             min-width: $cta-button-min-width-desktop-tablet;
             padding: 0 $cta-button-min-padding-desktop-tablet-left-right;
+            max-width: 20%;
+            margin-left: auto;
         }
     }
 
@@ -351,15 +353,7 @@ main {
     }
 
     &__item-date {
-        @include text-body;
         color: $color-primary-silver;
-        margin: 0;
-    }
-
-    &__item-text {
-        @include text-body;
-        margin: 0;
-        line-height: 1.5;
     }
 }
 
